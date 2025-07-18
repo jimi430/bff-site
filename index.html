@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Best Friend Forever 💕</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background-image: url('your-background.jpg'); /* ← 等下换成你自己的图片链接或文件名 */
+      background-size: cover;
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 15% auto;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #d94fa1;
+    }
+
+    p {
+      color: #4a2c2a;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .petal {
+      position: fixed;
+      top: -10px;
+      z-index: 9999;
+      user-select: none;
+      pointer-events: none;
+      font-size: 18px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Best Friend Forever 💕</h1>
+    <p>
+      To my dearest friend,<br />
+      This page is a quiet little corner on the internet, just for you.<br />
+      You bring light, laughter, and warmth into my life.<br />
+      We’ve shared tears, jokes, dreams and secrets—<br />
+      And I know, no matter where life takes us, we’ll always have each other.<br /><br />
+      With love, always.<br />
+      Xiaohan 💗
+    </p>
+  </div>
+
+  <script>
+    const symbols = ['🌸', '⭐'];
+    setInterval(() => {
+      const petal = document.createElement('div');
+      petal.classList.add('petal');
+      petal.style.left = Math.random() * window.innerWidth + 'px';
+      petal.style.animationDuration = 3 + Math.random() * 3 + 's';
+      petal.style.opacity = Math.random();
+      petal.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+      document.body.appendChild(petal);
+      setTimeout(() => petal.remove(), 6000);
+    }, 300);
+  </script>
+</body>
+</html>
